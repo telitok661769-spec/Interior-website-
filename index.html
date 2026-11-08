@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্বপ্ন ছোঁয়া ইন্টেরিয়র | Swapno Chowa Interior</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0f172a;
+            --secondary: #e0f2fe;
+            --accent: #38bdf8;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #0369a1);
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
+        }
+
+        .hero {
+            background: linear-gradient(180deg, var(--secondary) 0%, rgba(248, 250, 252, 0) 100%);
+            padding: 4rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            color: var(--primary-dark);
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .services {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem 1.8rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f1f5f9;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(2, 132, 199, 0.1);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-section {
+            background: white;
+            padding: 5rem 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">ছঁ</div>
+                স্বপ্ন ছোঁয়া ইন্টেরিয়র
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#services">সেবাসমূহ</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
+            </ul>
+            <a href="#contact" class="btn-primary">ফ্রি পরামর্শ</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div>
+                <span class="hero-badge">✨ প্রফেশনাল ইন্টেরিয়র ডিজাইন</span>
+                <h1 class="hero-title">আপনার স্বপ্নের ঘরকে সাজান মনের মতো করে</h1>
+                <p class="hero-desc">আধুনিক কাঠের ক্যাবিনেট, মডুলার কিচেন এবং নান্দনিক ফার্নিচার ইনস্টলেশনের বিশ্বস্ত প্রতিষ্ঠান। আপনার ঘরের সৌন্দর্য বৃদ্ধিতে আমরা আছি আপনার পাশে।</p>
+                <a href="#contact" class="btn-primary">যোগাযোগ করুন</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Interior Design" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2 class="section-title">আমাদের সেবাসমূহ</h2>
+            <p class="section-subtitle">আমরা আপনাকে সেরা ইন্টেরিয়র সলিউশন দিতে প্রতিশ্রুতিবদ্ধ</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🪵</div>
+                <h3>কাস্টম ক্যাবিনেট</h3>
+                <p>আপনার ঘরের স্থান অনুযায়ী সর্বোচ্চ মানসম্পন্ন কাঠের ক্যাবিনেট ডিজাইন ও তৈরি করা।</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🍽️</div>
+                <h3>মডুলার কিচেন</h3>
+                <p>আধুনিক কিচেন ক্যাবিনেট ও কিচেন ডেকোরেশনের সম্পূর্ণ সলিউশন।</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛋️</div>
+                <h3>ফার্নিচার ফিটিং</h3>
+                <p>যেকোনো প্রকার কাঠের ফার্নিচার ফিটিং, মেরামত এবং রেনোভেশন সেবা।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">যোগাযোগ করুন</h2>
+            <p class="section-subtitle">আপনার প্রয়োজন লিখে আমাদের বার্তা পাঠান</p>
+        </div>
+        <div class="contact-container">
+            <div>
+                <h3>আজই আপনার প্রজেক্ট শুরু করুন</h3>
+                <p style="margin: 1rem 0; color: var(--text-muted);">যেকোনো প্রশ্ন বা ফ্রি পরামর্শের জন্য নিচের ফর্মে বার্তা পাঠান অথবা আমাদের সরাসরি ফোন করুন।</p>
+                <p><strong>📍 ঠিকানা:</strong> চট্টগ্রাম, বাংলাদেশ</p>
+                <p style="margin-top: 0.5rem;"><strong>📞 ফোন:</strong> ০১৭১৯৮৬৯২৯৯</p>
+                <p style="margin-top: 0.5rem;"><strong>✉️ ইমেইল:</strong> mohammadjewel336@gmail.com</p>
+            </div>
+
+            <!-- Formspree যুক্ত করা ফর্ম -->
+            <form action="https://formspree.io/f/xdeevvqy" method="POST">
+                <div class="form-group">
+                    <label>আপনার নাম</label>
+                    <input type="text" name="name" required placeholder="আপনার নাম লিখুন">
+                </div>
+                <div class="form-group">
+                    <label>ইমেইল ঠিকানা</label>
+                    <input type="email" name="email" required placeholder="ইমেইল দিন">
+                </div>
+                <div class="form-group">
+                    <label>ফোন নম্বর</label>
+                    <input type="tel" name="phone" required placeholder="মোবাইল নম্বর">
+                </div>
+                <div class="form-group">
+                    <label>বার্তা / কাজের বিবরণ</label>
+                    <textarea name="message" required placeholder="আপনার মেসেজ লিখুন..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">বার্তা পাঠান</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 স্বপ্ন ছোঁয়া ইন্টেরিয়র। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+</body>
+</html>
