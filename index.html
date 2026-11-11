@@ -1,369 +1,356 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>স্বপ্ন ছোঁয়া ইন্টেরিয়র | Swapno Chowa Interior</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Hind Siliguri', sans-serif;
-        }
-
-        :root {
-            --primary: #0284c7;
-            --primary-dark: #0f172a;
-            --secondary: #e0f2fe;
-            --accent: #38bdf8;
-            --bg-light: #f8fafc;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
-        }
-
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .logo-icon {
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), #0369a1);
-            color: white;
-            padding: 0.6rem 1.4rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
-        }
-
-        .hero {
-            background: linear-gradient(180deg, var(--secondary) 0%, rgba(248, 250, 252, 0) 100%);
-            padding: 4rem 2rem 6rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: white;
-            color: var(--primary);
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .hero-title {
-            font-size: 2.8rem;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
-            color: var(--primary-dark);
-        }
-
-        .hero-desc {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero-image-wrapper {
-            position: relative;
-            text-align: center;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 480px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .services {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            color: var(--primary-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .section-subtitle {
-            color: var(--text-muted);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem 1.8rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-            border: 1px solid #f1f5f9;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(2, 132, 199, 0.1);
-        }
-
-        .service-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--secondary);
-            color: var(--primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .contact-section {
-            background: white;
-            padding: 5rem 2rem;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .contact-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            background: var(--bg-light);
-            padding: 3rem;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-        }
-
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.4rem;
-            font-weight: 600;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            outline: none;
-            font-size: 1rem;
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        footer {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .hero-container, .contact-container {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>আড্ডা — চ্যাট ও কলিং অ্যাপ</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;height:100vh;height:100dvh;display:grid;place-items:center;background:linear-gradient(135deg,#e9d5ff,#fbcfe8 50%,#fed7aa);font-family:system-ui,-apple-system,sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.chat-container{width:min(100%,450px);height:100%;max-height:850px;display:flex;flex-direction:column;background:#fff;overflow:hidden;box-shadow:0 25px 50px -12px rgba(168,85,247,.25);position:relative;border-radius:32px}
+header{background:linear-gradient(135deg,#a855f7,#ec4899);padding:16px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between}
+.header-left{display:flex;align-items:center;gap:12px}
+.avatar{width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.header-info h2{margin:0;font-size:16px;font-weight:600}
+.header-info p{margin:2px 0 0;font-size:11px;opacity:.9}
+.header-actions{display:flex;gap:6px}
+.header-actions button{background:rgba(255,255,255,.25);border:none;color:#fff;padding:6px 10px;border-radius:12px;cursor:pointer;font-size:12px;font-weight:600}
+.view{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.hidden{display:none!important}
+.login-wrapper{flex:1;display:flex;justify-content:center;align-items:center;padding:20px;background:linear-gradient(180deg,#e9d5ff,#fff)}
+.login-card{width:100%;background:#fff;padding:30px 20px;border-radius:30px;box-shadow:0 15px 35px rgba(168,85,247,.15);display:flex;flex-direction:column;gap:14px}
+.login-card h3{margin:0;text-align:center;color:#3b0764;font-size:22px}
+.login-card input{width:100%;padding:12px 16px;border:1px solid #f3e8ff;border-radius:16px;outline:none;background:#faf5ff;font-size:16px}
+.login-card button{width:100%;padding:12px;background:linear-gradient(90deg,#f472b6,#c084fc);color:#fff;border:none;border-radius:16px;font-weight:bold;font-size:15px;cursor:pointer}
+.login-card button.alt{background:#f3e8ff;color:#7e22ce}
+.call-modal{position:absolute;inset:0;background:rgba(59,7,100,.88);backdrop-filter:blur(10px);z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;gap:20px}
+.call-avatar{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,#f472b6,#c084fc);display:grid;place-items:center;font-size:40px;box-shadow:0 0 30px rgba(244,114,182,.6);animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.08)}}
+.call-actions{display:flex;gap:20px;margin-top:20px}
+.btn-call-end,.btn-call-accept{color:#fff;border:none;padding:12px 24px;border-radius:24px;font-weight:bold;cursor:pointer}
+.btn-call-end{background:#ef4444}.btn-call-accept{background:#22c55e}
+.partner-bar{padding:10px;background:#f1f5f9;display:flex;gap:6px}
+.partner-bar input{flex:1;padding:8px 10px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px}
+.partner-bar button{padding:6px 14px;background:#a855f7;color:#fff;border:none;border-radius:8px;font-size:13px}
+#messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#faf5ff}
+.message{max-width:78%;padding:10px 14px;border-radius:16px;background:#fff;box-shadow:0 2px 6px rgba(168,85,247,.08)}
+.message.mine{align-self:flex-end;background:linear-gradient(135deg,#a855f7,#ec4899);color:#fff}
+.text{font-size:14px;word-break:break-word}
+.message-img{max-width:100%;border-radius:10px;margin-top:4px;display:block}
+.chat-form{padding:10px 14px;background:#fff;display:flex;align-items:center;gap:8px;border-top:1px solid #f3e8ff}
+.chat-form input[type=text]{flex:1;padding:10px 14px;border:1px solid #f3e8ff;border-radius:20px;outline:none;background:#faf5ff;font-size:16px}
+.attach-btn,.send-btn{background:#f3e8ff;color:#a855f7;border:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;cursor:pointer}
+.send-btn{background:linear-gradient(135deg,#a855f7,#ec4899);color:#fff}
+.empty{margin:auto;text-align:center;color:#7e22ce;font-size:13px}
+button:focus-visible,input:focus-visible{outline:3px solid #a855f7;outline-offset:2px}
+</style>
 </head>
 <body>
+<div class="chat-container">
+  <header>
+    <div class="header-left">
+      <div class="avatar">💬</div>
+      <div class="header-info"><h2 id="headerTitle">আড্ডা</h2><p id="headerSub">লগইন করুন</p></div>
+    </div>
+    <div class="header-actions">
+      <button id="audioCallBtn" class="hidden" aria-label="অডিও কল">📞</button>
+      <button id="logoutBtn" class="hidden">লগআউট</button>
+    </div>
+  </header>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <div class="logo-icon">ছঁ</div>
-                স্বপ্ন ছোঁয়া ইন্টেরিয়র
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">হোম</a></li>
-                <li><a href="#services">সেবাসমূহ</a></li>
-                <li><a href="#contact">যোগাযোগ</a></li>
-            </ul>
-            <a href="#contact" class="btn-primary">ফ্রি পরামর্শ</a>
-        </nav>
-    </header>
+  <div id="loginView" class="view">
+    <div class="login-wrapper"><div class="login-card">
+      <h3>স্বাগতম</h3>
+      <input type="tel" id="loginPhone" placeholder="আপনার মোবাইল নম্বর" maxlength="15" autocomplete="username" />
+      <input type="password" id="loginPass" placeholder="পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)" maxlength="30" autocomplete="current-password" />
+      <button id="loginBtn">প্রবেশ করুন</button>
+      <button id="signupBtn" class="alt">নতুন অ্যাকাউন্ট খুলুন</button>
+    </div></div>
+  </div>
 
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div>
-                <span class="hero-badge">✨ প্রফেশনাল ইন্টেরিয়র ডিজাইন</span>
-                <h1 class="hero-title">আপনার স্বপ্নের ঘরকে সাজান মনের মতো করে</h1>
-                <p class="hero-desc">আধুনিক কাঠের ক্যাবিনেট, মডুলার কিচেন এবং নান্দনিক ফার্নিচার ইনস্টলেশনের বিশ্বস্ত প্রতিষ্ঠান। আপনার ঘরের সৌন্দর্য বৃদ্ধিতে আমরা আছি আপনার পাশে।</p>
-                <a href="#contact" class="btn-primary">যোগাযোগ করুন</a>
-            </div>
-            <div class="hero-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Interior Design" class="hero-image">
-            </div>
-        </div>
-    </section>
+  <div id="chatView" class="view hidden">
+    <div class="partner-bar">
+      <input type="tel" id="targetPhone" placeholder="চ্যাট করার নম্বর দিন" />
+      <button id="connectBtn">শুরু</button>
+    </div>
+    <div id="messages"><div class="empty">উপরে নম্বর দিয়ে চ্যাট শুরু করুন।</div></div>
+    <form id="chatForm" class="chat-form">
+      <input type="file" id="imageInput" accept="image/*" hidden />
+      <button type="button" id="attachBtn" class="attach-btn" aria-label="ছবি">📎</button>
+      <input id="messageInput" type="text" placeholder="মেসেজ লিখুন..." autocomplete="off" />
+      <button type="submit" class="send-btn" aria-label="পাঠান">➤</button>
+    </form>
+  </div>
 
-    <section id="services" class="services">
-        <div class="section-header">
-            <h2 class="section-title">আমাদের সেবাসমূহ</h2>
-            <p class="section-subtitle">আমরা আপনাকে সেরা ইন্টেরিয়র সলিউশন দিতে প্রতিশ্রুতিবদ্ধ</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🪵</div>
-                <h3>কাস্টম ক্যাবিনেট</h3>
-                <p>আপনার ঘরের স্থান অনুযায়ী সর্বোচ্চ মানসম্পন্ন কাঠের ক্যাবিনেট ডিজাইন ও তৈরি করা।</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🍽️</div>
-                <h3>মডুলার কিচেন</h3>
-                <p>আধুনিক কিচেন ক্যাবিনেট ও কিচেন ডেকোরেশনের সম্পূর্ণ সলিউশন।</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🛋️</div>
-                <h3>ফার্নিচার ফিটিং</h3>
-                <p>যেকোনো প্রকার কাঠের ফার্নিচার ফিটিং, মেরামত এবং রেনোভেশন সেবা।</p>
-            </div>
-        </div>
-    </section>
+  <div id="callModal" class="call-modal hidden">
+    <div class="call-avatar">📞</div>
+    <h3 id="callStatusText">কলিং...</h3>
+    <div class="call-actions">
+      <button id="acceptCallBtn" class="btn-call-accept hidden">রিসিভ করুন</button>
+      <button id="endCallBtn" class="btn-call-end">কল কাটুন</button>
+    </div>
+    <audio id="remoteAudio" autoplay></audio>
+  </div>
+</div>
 
-    <section id="contact" class="contact-section">
-        <div class="section-header">
-            <h2 class="section-title">যোগাযোগ করুন</h2>
-            <p class="section-subtitle">আপনার প্রয়োজন লিখে আমাদের বার্তা পাঠান</p>
-        </div>
-        <div class="contact-container">
-            <div>
-                <h3>আজই আপনার প্রজেক্ট শুরু করুন</h3>
-                <p style="margin: 1rem 0; color: var(--text-muted);">যেকোনো প্রশ্ন বা ফ্রি পরামর্শের জন্য নিচের ফর্মে বার্তা পাঠান অথবা আমাদের সরাসরি ফোন করুন।</p>
-                <p><strong>📍 ঠিকানা:</strong> চট্টগ্রাম, বাংলাদেশ</p>
-                <p style="margin-top: 0.5rem;"><strong>📞 ফোন:</strong> ০১৭১৯৮৬৯২৯৯</p>
-                <p style="margin-top: 0.5rem;"><strong>✉️ ইমেইল:</strong> mohammadjewel336@gmail.com</p>
-            </div>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getFirestore, collection, addDoc, query, where, onSnapshot, serverTimestamp, doc, setDoc, updateDoc, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-            <!-- Formspree যুক্ত করা ফর্ম -->
-            <form action="https://formspree.io/f/xdeevvqy" method="POST">
-                <div class="form-group">
-                    <label>আপনার নাম</label>
-                    <input type="text" name="name" required placeholder="আপনার নাম লিখুন">
-                </div>
-                <div class="form-group">
-                    <label>ইমেইল ঠিকানা</label>
-                    <input type="email" name="email" required placeholder="ইমেইল দিন">
-                </div>
-                <div class="form-group">
-                    <label>ফোন নম্বর</label>
-                    <input type="tel" name="phone" required placeholder="মোবাইল নম্বর">
-                </div>
-                <div class="form-group">
-                    <label>বার্তা / কাজের বিবরণ</label>
-                    <textarea name="message" required placeholder="আপনার মেসেজ লিখুন..."></textarea>
-                </div>
-                <button type="submit" class="btn-primary" style="width: 100%;">বার্তা পাঠান</button>
-            </form>
-        </div>
-    </section>
+// এখানে Firebase Console থেকে পাওয়া আপনার আসল তথ্য বসান
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "jewel-minichat.firebaseapp.com",
+  projectId: "jewel-minichat",
+  storageBucket: "jewel-minichat.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-    <footer>
-        <p>© 2026 স্বপ্ন ছোঁয়া ইন্টেরিয়র। সর্বস্বত্ব সংরক্ষিত।</p>
-    </footer>
+// কল ব্যর্থ হলে TURN সার্ভার যোগ করুন (মোবাইল ডেটায় শুধু STUN যথেষ্ট নাও হতে পারে)
+const servers = { iceServers: [{ urls: "stun:stun.l.google.com:19302" }] };
 
+let me = null, partner = localStorage.getItem("chat_partner") || "";
+let unsubChat = null, unsubIncoming = null;
+let pc = null, localStream = null, callRef = null, ringTimer = null, callUnsubs = [];
+
+const $ = id => document.getElementById(id);
+const [loginView, chatView, loginPhone, loginPass, loginBtn, signupBtn, logoutBtn, audioCallBtn, headerTitle, headerSub,
+  targetPhone, connectBtn, messages, chatForm, messageInput, attachBtn, imageInput,
+  callModal, callStatusText, acceptCallBtn, endCallBtn, remoteAudio] =
+  ["loginView","chatView","loginPhone","loginPass","loginBtn","signupBtn","logoutBtn","audioCallBtn","headerTitle","headerSub",
+   "targetPhone","connectBtn","messages","chatForm","messageInput","attachBtn","imageInput",
+   "callModal","callStatusText","acceptCallBtn","endCallBtn","remoteAudio"].map($);
+
+targetPhone.value = partner;
+const digits = s => s.replace(/\D/g, "");
+const roomId = (a, b) => [a, b].sort().join("_");
+
+/* ---------- লগইন (আসল পাসওয়ার্ড যাচাই) ---------- */
+const errMsg = c => ({
+  "auth/email-already-in-use": "এই নম্বরে অ্যাকাউন্ট আছে, প্রবেশ করুন।",
+  "auth/invalid-credential": "নম্বর বা পাসওয়ার্ড ভুল।",
+  "auth/user-not-found": "নম্বর বা পাসওয়ার্ড ভুল।",
+  "auth/wrong-password": "নম্বর বা পাসওয়ার্ড ভুল।",
+  "auth/weak-password": "পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের দিন।"
+}[c] || "সমস্যা হয়েছে, আবার চেষ্টা করুন।");
+
+async function authenticate(isNew) {
+  const phone = digits(loginPhone.value), pass = loginPass.value;
+  if (phone.length < 8 || pass.length < 6) { alert("সঠিক নম্বর ও কমপক্ষে ৬ অক্ষরের পাসওয়ার্ড দিন!"); return; }
+  const email = phone + "@adda.app";
+  try {
+    await (isNew ? createUserWithEmailAndPassword(auth, email, pass) : signInWithEmailAndPassword(auth, email, pass));
+  } catch (e) { alert(errMsg(e.code)); }
+}
+loginBtn.onclick = () => authenticate(false);
+signupBtn.onclick = () => authenticate(true);
+logoutBtn.onclick = () => signOut(auth);
+
+onAuthStateChanged(auth, user => {
+  if (user) { me = user.email.split("@")[0]; showChat(); listenForIncomingCalls(); }
+  else { me = null; stopAll(); loginView.classList.remove("hidden"); chatView.classList.add("hidden");
+    logoutBtn.classList.add("hidden"); audioCallBtn.classList.add("hidden");
+    headerTitle.textContent = "আড্ডা"; headerSub.textContent = "লগইন করুন"; }
+});
+
+function stopAll() {
+  unsubChat?.(); unsubIncoming?.(); unsubChat = unsubIncoming = null; closeCall();
+}
+
+function showChat() {
+  loginView.classList.add("hidden"); chatView.classList.remove("hidden");
+  logoutBtn.classList.remove("hidden"); audioCallBtn.classList.remove("hidden");
+  headerTitle.textContent = "নম্বর: " + me;
+  if (partner) loadMessages();
+}
+
+connectBtn.onclick = () => {
+  const p = digits(targetPhone.value);
+  if (!p || p === me) { alert("সঠিক নম্বর দিন!"); return; }
+  partner = p; localStorage.setItem("chat_partner", p); loadMessages();
+};
+
+/* ---------- চ্যাট ---------- */
+function loadMessages() {
+  headerSub.textContent = "চ্যাট উইথ: " + partner;
+  unsubChat?.();
+  const q = query(collection(db, "secure_chats"), where("roomId", "==", roomId(me, partner)));
+  unsubChat = onSnapshot(q, snap => {
+    messages.replaceChildren();
+    if (snap.empty) {
+      const e = document.createElement("div"); e.className = "empty";
+      e.textContent = "কোনো বার্তা নেই। প্রথম বার্তা পাঠান!"; messages.append(e); return;
+    }
+    // সার্ভার সময় আসার আগে নতুন মেসেজ যেন উপরে লাফিয়ে না যায়
+    const list = snap.docs.map(d => d.data())
+      .sort((a, b) => (a.createdAt?.toMillis?.() ?? Date.now()) - (b.createdAt?.toMillis?.() ?? Date.now()));
+    for (const data of list) {
+      const div = document.createElement("div");
+      div.className = "message" + (data.sender === me ? " mine" : "");
+      if (data.text) { const t = document.createElement("div"); t.className = "text"; t.textContent = data.text; div.append(t); }
+      if (data.image) { const i = document.createElement("img"); i.className = "message-img"; i.alt = "ছবি"; i.src = data.image; div.append(i); }
+      messages.append(div);
+    }
+    messages.scrollTop = messages.scrollHeight;
+  }, err => console.error(err));
+}
+
+chatForm.onsubmit = async e => {
+  e.preventDefault();
+  const text = messageInput.value.trim();
+  if (!text || !partner) return;
+  messageInput.value = "";
+  try {
+    await addDoc(collection(db, "secure_chats"), { roomId: roomId(me, partner), sender: me, text, image: null, createdAt: serverTimestamp() });
+  } catch (err) { messageInput.value = text; alert("মেসেজ পাঠানো যায়নি।"); }
+};
+
+attachBtn.onclick = () => { if (!partner) { alert("আগে চ্যাট নম্বর দিয়ে শুরু করুন!"); return; } imageInput.click(); };
+
+imageInput.onchange = e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const img = new Image();
+    img.onload = async () => {
+      const canvas = document.createElement("canvas");
+      let w = img.width, h = img.height;
+      if (w > 400) { h *= 400 / w; w = 400; }
+      canvas.width = w; canvas.height = h;
+      canvas.getContext("2d").drawImage(img, 0, 0, w, h);
+      try {
+        await addDoc(collection(db, "secure_chats"), {
+          roomId: roomId(me, partner), sender: me, text: "",
+          image: canvas.toDataURL("image/jpeg", 0.6), createdAt: serverTimestamp()
+        });
+      } catch (err) { alert("ছবি পাঠানো যায়নি।"); }
+      imageInput.value = "";
+    };
+    img.onerror = () => alert("ছবিটি পড়া যায়নি।");
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+};
+
+/* ---------- অডিও কল (WebRTC) ---------- */
+function newPeer() {
+  pc = new RTCPeerConnection(servers);
+  localStream.getTracks().forEach(t => pc.addTrack(t, localStream));
+  pc.ontrack = ev => { remoteAudio.srcObject = ev.streams[0]; remoteAudio.play().catch(() => {}); };
+}
+
+function watchCandidates(sub) {
+  callUnsubs.push(onSnapshot(collection(callRef, sub), snap => {
+    snap.docChanges().forEach(c => { if (c.type === "added") pc?.addIceCandidate(new RTCIceCandidate(c.doc.data())).catch(() => {}); });
+  }));
+}
+
+function watchCallEnd() {
+  callUnsubs.push(onSnapshot(callRef, snap => { if (!snap.exists() && pc) closeCall(); }));
+}
+
+audioCallBtn.onclick = async () => {
+  if (!partner) { alert("আগে যার সাথে কল করবেন তার নম্বর দিন!"); return; }
+  if (pc) return;
+  callModal.classList.remove("hidden");
+  callStatusText.textContent = partner + "-কে কল করা হচ্ছে...";
+  acceptCallBtn.classList.add("hidden");
+  try {
+    localStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+    newPeer();
+    callRef = doc(collection(db, "calls"));            // প্রতি কলের জন্য আলাদা আইডি
+    pc.onicecandidate = ev => { if (ev.candidate) addDoc(collection(callRef, "offerCandidates"), ev.candidate.toJSON()); };
+    const offer = await pc.createOffer();
+    await pc.setLocalDescription(offer);
+    await setDoc(callRef, { caller: me, callee: partner, offer: { type: offer.type, sdp: offer.sdp }, createdAt: serverTimestamp() });
+
+    callUnsubs.push(onSnapshot(callRef, async snap => {
+      const d = snap.data();
+      if (d?.answer && pc && !pc.currentRemoteDescription) {
+        clearTimeout(ringTimer);
+        await pc.setRemoteDescription(new RTCSessionDescription(d.answer));
+        watchCandidates("answerCandidates");           // রিমোট ডেসক্রিপশনের পরেই শুরু
+        callStatusText.textContent = "কথা বলছি...";
+      } else if (!snap.exists() && pc) closeCall();
+    }));
+    ringTimer = setTimeout(endCall, 45000);            // ৪৫ সেকেন্ডে উত্তর না এলে বাতিল
+  } catch (err) {
+    console.error(err);
+    alert("মাইক্রোফোন এক্সেস পাওয়া যায়নি বা কল শুরু করা যায়নি।");
+    endCall();
+  }
+};
+
+function listenForIncomingCalls() {
+  const q = query(collection(db, "calls"), where("callee", "==", me));   // শুধু আমার কল
+  unsubIncoming = onSnapshot(q, snap => {
+    snap.docChanges().forEach(change => {
+      if (change.type !== "added") return;
+      const data = change.doc.data();
+      const age = Date.now() - (data.createdAt?.toMillis?.() ?? Date.now());
+      if (pc || data.answer || age > 60000) return;     // ব্যস্ত বা পুরনো কল উপেক্ষা
+      callRef = change.doc.ref;
+      partner = data.caller; targetPhone.value = partner;
+      localStorage.setItem("chat_partner", partner); loadMessages();
+      callModal.classList.remove("hidden");
+      callStatusText.textContent = partner + " থেকে কল এসেছে...";
+      acceptCallBtn.classList.remove("hidden");
+      watchCallEnd();
+      acceptCallBtn.onclick = () => acceptCall(data);
+    });
+  });
+}
+
+async function acceptCall(data) {
+  acceptCallBtn.classList.add("hidden");
+  callStatusText.textContent = "কল সংযোগ হচ্ছে...";
+  try {
+    localStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+    newPeer();
+    pc.onicecandidate = ev => { if (ev.candidate) addDoc(collection(callRef, "answerCandidates"), ev.candidate.toJSON()); };
+    await pc.setRemoteDescription(new RTCSessionDescription(data.offer));
+    watchCandidates("offerCandidates");
+    const answer = await pc.createAnswer();
+    await pc.setLocalDescription(answer);
+    await updateDoc(callRef, { answer: { type: answer.type, sdp: answer.sdp } });
+    callStatusText.textContent = "কথা বলছি...";
+  } catch (err) {
+    console.error(err);
+    alert("মাইক্রোফোন এক্সেস পাওয়া যায়নি।");
+    endCall();
+  }
+}
+
+function closeCall() {
+  clearTimeout(ringTimer);
+  callUnsubs.forEach(u => u()); callUnsubs = [];
+  localStream?.getTracks().forEach(t => t.stop()); localStream = null;
+  pc?.close(); pc = null;
+  callModal.classList.add("hidden");
+  acceptCallBtn.classList.add("hidden");
+  callStatusText.textContent = "কলিং...";
+  remoteAudio.srcObject = null;
+}
+
+async function endCall() {
+  const ref = callRef; callRef = null;
+  closeCall();
+  if (!ref) return;
+  try {   // ক্যান্ডিডেটসহ মুছে দিন, যাতে পরের কলে পুরনো তথ্য না মেশে
+    for (const sub of ["offerCandidates", "answerCandidates"]) {
+      const s = await getDocs(collection(ref, sub));
+      await Promise.all(s.docs.map(d => deleteDoc(d.ref)));
+    }
+    await deleteDoc(ref);
+  } catch (e) {}
+}
+endCallBtn.onclick = endCall;
+</script>
 </body>
 </html>
